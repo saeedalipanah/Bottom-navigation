@@ -1,0 +1,21 @@
+:root {
+  // light Theme
+  --background-color: #ececec;
+  --background-lighten-color: #fafafa;
+  --background-most-lighten-color: #ffffff;
+  --text-color: #191c1d;
+  --text-muted-color: #80838a;
+  --primary-color: #0d808f;
+  --secondary-color: #03453b;
+
+  &.dark-theme {
+    // dark Theme
+    --background-color: #101113;
+    --background-lighten-color: #1a1c1e;
+    --background-most-lighten-color: #272a30;
+    --text-color: #f7f7f7;
+    --text-muted-color: #5d6164;
+    --primary-color: #1dffdd;
+    --secondary-color: #03453b;
+  }
+}
