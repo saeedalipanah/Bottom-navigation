@@ -4,9 +4,8 @@
     <h1>Home Page</h1>
   </div>
 </template>
-<script setup lang='ts'>
+<script setup lang="ts">
 definePageMeta({
-  name: 'Home'  // Set the name for this route
+  name: "Home",
 });
-
 </script>
