@@ -1,75 +1,15 @@
-# Nuxt Minimal Starter
+عرض سلام و وقت بخیر، خسته نباشید
+تست تسکی مربوط به bottomNavigation
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+تکنولوژی های استفاده شده:
+nuxt 3 js
+pinia
+sass
 
-## Setup
-
-Make sure to install dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- این پروژه کاملا رسپانسیو است و سایز اسکرین های مختلف در آن هندل شده است
+- تم تاریک و روشن در آن هندل شده است.-
+- در حالت دسکتاپ سایدبار از سمت راست نمایش داده میشود و در حالت تبلت و موبایل باتم نویگیشن از پایین صحفه 
+- روت های متفاوت در نظر گرفته شده است و با کلیک بر روی هر مورد تغییر روت صورت میگیرد و در کانسول لاگ چاپ میشود
+- روت انتخاب شده با استایل متفاوت از دیگر روت ها مشخص میشود
+- تم استفاده شده توسط کاربر ذخیره شده و با رفرش از بین نمیرود.
+- ساختار پروژه به گونه ای چیده شده است که در صورت بزرگ شدن آن مشکلی پیش نیامده کاملا تمیز و مستقل میتوان بخش های مختلف را هندل کرد
