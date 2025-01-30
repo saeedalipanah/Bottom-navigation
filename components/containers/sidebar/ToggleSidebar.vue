@@ -1,12 +1,12 @@
 <template>
   <BaseButton class="toggle-sidebar-btn" @click="emits('click')"
-    ><i :class="`bx bx-chevron-${isSidebarClosed ? 'left' : 'right'}`"></i
+    ><i :class="`bx bx-chevron-${isSidebarExpanded ? 'right' : 'left'}`"></i
   ></BaseButton>
 </template>
 
 <script setup lang="ts">
 defineProps({
-  isSidebarClosed: {
+  isSidebarExpanded: {
     type: Boolean,
     default: false,
   },

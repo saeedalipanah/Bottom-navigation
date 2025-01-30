@@ -1,7 +1,7 @@
 <template>
   <NuxtLink
     :to="{ name: item.name }"
-    class="navigation-item"
+    :class="`navigation-item ${isSidebarExpanded ? 'expanded' : 'closed'}`"
     @click="selectNavItem"
   >
     <i :class="`nav-item-icon bx bx-${item.icon}`"></i>
@@ -10,7 +10,7 @@
 </template>
 <script setup lang="ts">
 import type { PropType } from "vue";
-
+const isSidebarExpanded = inject("is-sidebar-expanded");
 const props = defineProps({
   item: {
     type: Object as PropType<any>,
@@ -33,7 +33,7 @@ const selectNavItem = () => {
   justify-content: space-between;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
   .nav-item-icon {
     font-size: 2rem;
     margin-inline-end: 2rem;
@@ -55,7 +55,10 @@ const selectNavItem = () => {
   &.router-link-active,
   &.router-link-exact-active {
     color: var(--primary-color);
-    border-left: 6px solid var(--primary-color);
+    border-right: 6px solid var(--primary-color);
+    &.closed {
+      border-right: unset;
+    }
     @include md {
       border: none;
       box-shadow: none;

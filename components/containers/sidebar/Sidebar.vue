@@ -3,10 +3,7 @@
     <slot name="header"></slot>
     <slot name="default" />
     <slot name="footer">
-      <ToggleSidebar
-        :is-sidebar-closed="isSidebarClosed"
-        @click="toggleSidebar"
-      />
+      <ToggleSidebar :is-sidebar-expanded="isExpanded" @click="toggleSidebar" />
     </slot>
   </nav>
 </template>
@@ -32,13 +29,17 @@ const syncSidebarWidth = computed({
   },
 });
 
-const isSidebarClosed = ref(false);
+const isExpanded = ref(true);
 const toggleSidebar = () => {
-  isSidebarClosed.value = !isSidebarClosed.value;
-  isSidebarClosed.value
-    ? (syncSidebarWidth.value = 4.1)
-    : (syncSidebarWidth.value = 16);
+  isExpanded.value = !isExpanded.value;
+  isExpanded.value
+    ? (syncSidebarWidth.value = 16)
+    : (syncSidebarWidth.value = 4.1);
 };
+provide(
+  "is-sidebar-expanded",
+  computed(() => isExpanded.value)
+);
 </script>
 
 <style scoped lang="scss">
